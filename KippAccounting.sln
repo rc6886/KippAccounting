@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KippAccounting", "KippAccounting\KippAccounting.csproj", "{593DB9B9-6A81-416D-87FF-3F3BADBC0C05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{E4686EDC-F61B-4F9C-A3E5-95F738FE85CA}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{F870C164-0EA6-4B4A-B93B-ABCC8F256D4E}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\KippAccounting-WAWS-dev.json = PublishScripts\Configurations\KippAccounting-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{865EA6F2-D029-43F1-B6A9-307D9616090C}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KippAccounting.DataAccess", "KippAccounting.DataAccess\KippAccounting.DataAccess.csproj", "{B6B8C0AE-FC51-4CD6-9F36-EF6B76C2D870}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{593DB9B9-6A81-416D-87FF-3F3BADBC0C05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{593DB9B9-6A81-416D-87FF-3F3BADBC0C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{593DB9B9-6A81-416D-87FF-3F3BADBC0C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{593DB9B9-6A81-416D-87FF-3F3BADBC0C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6B8C0AE-FC51-4CD6-9F36-EF6B76C2D870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B8C0AE-FC51-4CD6-9F36-EF6B76C2D870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B8C0AE-FC51-4CD6-9F36-EF6B76C2D870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B8C0AE-FC51-4CD6-9F36-EF6B76C2D870}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F870C164-0EA6-4B4A-B93B-ABCC8F256D4E} = {E4686EDC-F61B-4F9C-A3E5-95F738FE85CA}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,60 @@
+﻿@model KippAcctCodeSearch.Controllers.HomeIndexViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "KIPP Accounting - Search Accounting Codes";
+}
+
+<form action="/Home/Index" method="post">
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-md-3 form-group">
+            <input class="form-control" name="purchase" placeholder="Search by Purchase..." />
+        </div>
+        <div class="col-md-4 form-group">
+            @Html.DropDownList("FundId", Model.Funds, "-- Select a Fund--", new { @class = "form-control" })
+        </div>
+        <div class="col-md-4 form-group">
+            @Html.DropDownList("OrganizationCode", Model.Organizations, "-- Select an Organization --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-3 form-group">
+            @Html.DropDownList("SchoolYear", Model.SchoolYears, "-- Select a School Year --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-3 form-group">
+            <button class="btn btn-sm">Search</button>
+        </div>
+    </div>
+</form>
+@RenderNumberOfRecordsFound()
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Purchase</th>
+                    <th>Account Code</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            @if (Model.AccountingCodes != null && Model.AccountingCodes.Any())
+            {
+                foreach (var accountingCode in Model.AccountingCodes)
+                {
+                    <tr>
+                        <td>@accountingCode.Purchase</td>
+                        <td>@accountingCode.AccountCode</td>
+                        <td>@accountingCode.Note</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+
+@helper RenderNumberOfRecordsFound()
+{
+    var numberOfRecordsFound = Model.AccountingCodes != null ? Model.AccountingCodes.Count() : 0;
+
+    <div class="row col-md-4">
+        <i>@numberOfRecordsFound records found</i>
+    </div>
+}
