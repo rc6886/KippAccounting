@@ -51,7 +51,6 @@ namespace KippAcctCodeSearch.Controllers
         }
     }
 
-    //This is a test.
     public class HomeIndexViewModel
     {
         public IEnumerable<SelectListItem> Funds { get; set; }
